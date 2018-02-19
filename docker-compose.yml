@@ -90,22 +90,6 @@ services:
             - VIRTUAL_HOST=muximux.HOSTNAME.com
         restart: always
 
-    radarr:
-        image: linuxserver/radarr
-        container_name: radarr
-        volumes:
-            - /data_directory_path/config/radarr:/config
-            - /data_directory_path/Movies:/movies
-            - /data_directory_path/Downloads/complete:/downloads
-            - /etc/localtime:/etc/localtime:ro
-        ports:
-            - 7878:7878
-        env_file: uidgid.env
-        environment:
-            - VIRTUAL_HOST=radarr.HOSTNAME.com
-            - VIRTUAL_PORT=7878
-        restart: always
-
     ombi:
         image: linuxserver/ombi
         container_name: ombi
