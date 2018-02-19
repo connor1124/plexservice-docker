@@ -9,22 +9,6 @@ services:
             - 80:80
         restart: always
 
-    sabnzbd:
-        image: linuxserver/sabnzbd:latest
-        container_name: sabnzbd
-        volumes:
-            - /data_directory_path/config/sabnzbd:/config
-            - /data_directory_path/Downloads/complete:/downloads
-            - /data_directory_path/Downloads/incomplete:/incomplete-downloads
-        ports:
-            - 8080:8080
-        env_file: uidgid.env
-        environment:
-            - EDGE=1
-            - VIRTUAL_HOST=sabnzbd.HOSTNAME.com
-            - VIRTUAL_PORT=8080
-        restart: always
-
     couchpotato:
         image: linuxserver/couchpotato:latest
         container_name: couchpotato
@@ -93,21 +77,6 @@ services:
         environment:
             - VIRTUAL_HOST=plexpy.HOSTNAME.com
             - VIRTUAL_PORT=8181
-        restart: always
-
-    nzbhydra:
-        image: linuxserver/hydra
-        container_name: nzbhydra
-        volumes:
-            - /data_directory_path/config/nzbhydra:/config
-            - /data_directory_path/Downloads:/downloads
-            - /etc/localtime:/etc/localtime:ro
-        ports:
-            - 5075:5075
-        env_file: uidgid.env
-        environment:
-            - VIRTUAL_HOST=nzbhydra.HOSTNAME.com
-            - VIRTUAL_PORT=5075
         restart: always
 
     muximux:
