@@ -7,7 +7,6 @@
 * [linuxserver/sonarr](https://github.com/linuxserver/docker-sonarr) - Sonarr
 * [linuxserver/plexpy](https://github.com/linuxserver/docker-plexpy) - Plexpy
 * [linuxserver/muximux](https://github.com/linuxserver/docker-muximux) - Muximux
-* [linuxserver/radarr](https://github.com/linuxserver/docker-radarr) - Radarr
 * [linuxserver/ombi](https://github.com/linuxserver/docker-ombi) - Ombi
 * [linuxserver/nzbget](https://github.com/linuxserver/docker-nzbget) - NZBGet
 
